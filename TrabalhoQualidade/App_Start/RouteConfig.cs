@@ -24,6 +24,12 @@ namespace TrabalhoQualidade
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Teste",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Teste", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }
