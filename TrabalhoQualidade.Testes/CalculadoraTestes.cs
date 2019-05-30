@@ -36,5 +36,12 @@ namespace TrabalhoQualidade.Testes
             var r = calculadora.BinarioParaDecimal(100);
             Assert.AreEqual(4, r);
         }
+
+        [TestMethod]
+        public void DeveConverterUmBinarioDeCincoDigitosParaDecimal()
+        {
+            var r = calculadora.BinarioParaDecimal(1001);
+            Assert.AreEqual(21, r);
+        }
     }
 }
