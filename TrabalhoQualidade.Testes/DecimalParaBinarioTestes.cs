@@ -10,6 +10,13 @@ namespace TrabalhoQualidade.Testes
         Calculadora calculadora = new Calculadora();
 
         [TestMethod]
+        public void DeveConverterONumeroZero()
+        {
+            var r = calculadora.DecimalParaBinario(0);
+            Assert.AreEqual(0, r);
+        }
+
+        [TestMethod]
         public void DeveConverterUmDecimalDeUmDigito()
         {
             var r = calculadora.DecimalParaBinario(4);

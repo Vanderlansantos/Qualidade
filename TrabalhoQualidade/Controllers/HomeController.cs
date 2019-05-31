@@ -22,7 +22,7 @@ namespace TrabalhoQualidade.Controllers
         }
 
         [HttpPost]
-        public ActionResult BinarioParaDecimal(int Numero)
+        public ActionResult BinarioParaDecimal(int Numero = 0)
         {
             int resultado = calculadora.BinarioParaDecimal(Numero);
             if(calculadora.Notificacoes.Count > 0)
@@ -34,7 +34,7 @@ namespace TrabalhoQualidade.Controllers
             }
             else
             {
-                ViewBag.Resultado = "O resultado é: " + resultado;
+                ViewBag.Resultado = $"{Numero} em decimal é: {resultado}";
             }
             return View();
         }
@@ -45,7 +45,7 @@ namespace TrabalhoQualidade.Controllers
         }
 
         [HttpPost]
-        public ActionResult DecimalParaBinario(int Numero)
+        public ActionResult DecimalParaBinario(int Numero = 0)
         {
             int resultado = calculadora.DecimalParaBinario(Numero);
             if (calculadora.Notificacoes.Count > 0)
@@ -57,7 +57,7 @@ namespace TrabalhoQualidade.Controllers
             }
             else
             {
-                ViewBag.Resultado = "O resultado é: " + resultado;
+                ViewBag.Resultado = $"{Numero} em binário é: {resultado}";
             }
             return View();
         }

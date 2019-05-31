@@ -3,26 +3,24 @@
     ViewBag.Title = "BinarioParaDecimal";
 }
 
-<h2>BinarioParaDecimal</h2>
-
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
-    <h4>Calculadora</h4>
+    <h2>Converter Binário Para Decimal</h2>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <input type="text" name="Numero" class="form-control" />
-    <p>@ViewBag.Resultado</p>
+    <input type="number" name="Numero" class="form-control" />
+    <h4>@ViewBag.Resultado</h4>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Converter" class="btn btn-default" />
+            <input type="submit" value="Converter" class="btn btn-primary" />
         </div>
     </div>
 </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar", "Index")
 </div>
