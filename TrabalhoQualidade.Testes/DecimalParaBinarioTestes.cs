@@ -20,7 +20,7 @@ namespace TrabalhoQualidade.Testes
         public void DeveConverterUmDecimalDeUmDigito()
         {
             var r = calculadora.DecimalParaBinario(4);
-            Assert.AreEqual(100, r);
+            Assert.AreEqual(10, r);
         }
 
         [TestMethod]
